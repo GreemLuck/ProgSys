@@ -1,0 +1,2 @@
+This is a small test file,
+allowing to run the copy_file program in batch mode
