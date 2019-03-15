@@ -1,0 +1,14 @@
+/*----------------------------------------------------------------------------
+Exercises about scope and lifetime of C variables and functions, 
+cf. local.c, global1.c and global2.c
+   
+Beat Hirsbrunner, Ammar Halabi, 10 March 2015, v 1.0
+----------------------------------------------------------------------------*/
+
+Exercise 1.
+Add in the source file global1.c:
+   - a declaration for an global external char variable named c and
+   - assign in the main() fuction the character 'a' to it.
+
+Compile with make, and briefly explain the error that you get and correct the 
+source code.
