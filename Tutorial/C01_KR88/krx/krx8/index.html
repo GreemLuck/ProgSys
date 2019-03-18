@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Answers to Exercises</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+<h3 align="center">Chapter 8 - The UNIX System Interface</h3>
+
+<p>
+<strong>Exercise 8-1.</strong>&nbsp; Rewrite the program <tt>cat</tt> from Chapter 7 using 
+<tt>read</tt>, <tt>write</tt>, <tt>open</tt>, and <tt>close</tt> instead of their 
+standard library equivalents. Perform experiments to determine the relative speeds of 
+the two versions.
+&nbsp;<a href="krx801.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 8-2.</strong>&nbsp; Rewrite <tt>fopen</tt> and <tt>_fillbuf</tt>
+with fields instead of explicit bit operations. Compare code size and
+execution speed.</p>
+
+<p>
+<strong>Exercise 8-3.</strong>&nbsp; Design and write <tt>_flushbuf</tt>,
+<tt>fflush</tt>, and <tt>fclose</tt>.
+&nbsp;<a href="krx803.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 8-4.</strong>&nbsp; The standard library function</p>
+<pre>
+   int fseek(FILE *fp, long offset, int origin)
+</pre>
+<p>is identical to <tt>lseek</tt> except that <tt>fp</tt> is a file pointer instead of
+a file descriptor and return value is an <tt>int</tt> status, not a position.
+Write <tt>fseek</tt>. Make sure that your <tt>fseek</tt> coordinates properly
+with the buffering done for the other functions of the library.
+&nbsp;<a href="krx804.c">sol.c</a>
+&nbsp;<a href="krx804v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 8-5.</strong>&nbsp; Modify the <tt>fsize</tt> program to print the
+other information contained in the inode entry.</p>
+
+<p>
+<strong>Exercise 8-6.</strong>&nbsp; The standard library function
+<tt>calloc(n,size)</tt> returns a pointer to <tt>n</tt> objects of size
+<tt>size</tt>, with the storage initialized to zero. Write <tt>calloc</tt>,
+by calling <tt>malloc</tt> or by modifying it.
+&nbsp;<a href="krx806.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 8-7.</strong>&nbsp; <tt>malloc</tt> accepts a size request without
+checking its plausibility; <tt>free</tt> believes that the block it is asked
+to free contains a valid size field. Improve these routines so they make more
+pains with error checking.</p>
+
+<p>
+<strong>Exercise 8-8.</strong>&nbsp; Write a routine <tt>bfree(p,n)</tt> that will
+free any arbitrary block <tt>p</tt> of <tt>n</tt> characters into the free
+list maintained by <tt>malloc</tt> and <tt>free</tt>. By using
+<tt>bfree</tt>, a user can add a static or external array to the free list at
+any time.
+&nbsp;<a href="krx808.c">sol.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx7/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+</p>
+
+</div>
+</body>
+</html>
+

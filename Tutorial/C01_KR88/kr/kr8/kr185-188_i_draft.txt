@@ -1,0 +1,9 @@
+Fulvio, ce fichier doit être créé une fois le programme test réalisé. 
+
+L'idée de ce fichier n'est pas vraiment celle d'un batch input file (certaines 
+commandes ne pourront certainement pas être testées avec ce fichier, ce qui est 
+d'ailleurs aussi le cas de nos programmes test ADTs) mais plutôt de profiter 
+qu'après la commande Q (quit) on peut donner toute explication souhaitée 
+(et ceci sans devoir changer nos fichiers .php, .html !!!
+
+Béat, 8 février 2008

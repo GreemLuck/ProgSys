@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Answers to Exercises</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+<h3 align="center">Chapter 4 - Functions and Program Structure</h3>
+
+<p>
+<strong>Exercise 4-1.</strong>&nbsp; Write the function <tt>strindex(s,t)</tt> which returns the 
+position of the <em>rightmost</em> occurrence of <tt>t</tt> in <tt>s</tt>, or <tt>-1</tt> if 
+there is none.
+&nbsp;<a href="krx401.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-2.</strong>&nbsp; Extend <tt>atof</tt> to handle scientific notation of the form 
+</p><pre> 123.45e-6 </pre><p> where a floating-point number may be followed by <tt>e</tt> or <tt>E</tt> 
+and an optionally signed exponent.
+&nbsp;<a href="krx402.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-3.</strong>&nbsp; Given the basic framework, it's
+straightforward to extend the calculator. Add the modulus (%) operator and
+provisions for negative numbers.
+&nbsp;<a href="krx403.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-4.</strong>&nbsp; Add the commands to print the top elements of
+the stack without popping, to duplicate it, and to swap the top two elements.
+Add a command to clear the stack.
+&nbsp;<a href="krx404.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-5.</strong>&nbsp; Add access to library functions like
+<tt>sin</tt>, <tt>exp</tt>, and <tt>pow</tt>. See <tt>&lt;math.h&gt;</tt> in Appendix B, Section 4.
+&nbsp;<a href="krx405.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-6.</strong>&nbsp; Add commands for handling variables. (It's
+easy to provide twenty-six variables with single-letter names.) Add a
+variable for the most recently printed value.
+&nbsp;<a href="krx406.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-7.</strong>&nbsp; Write a routine <tt>ungets(s)</tt> that will
+push back an entire string onto the input. Should <tt>ungets</tt> know about
+<tt>buf</tt> and <tt>bufp</tt>, or should it just use <tt>ungetch</tt>?
+&nbsp;<a href="krx407.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-8.</strong>&nbsp; Suppose that there will never be more than one
+character of pushback. Modify <tt>getch</tt> and <tt>ungetch</tt>
+accordingly.
+&nbsp;<a href="krx408.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-9.</strong>&nbsp; Our <tt>getch</tt> and <tt>ungetch</tt> do not
+handle a pushed-back <tt>EOF</tt> correctly. Decide what their properties
+ought to be if an <tt>EOF</tt> is pushed back, then implement your design.</p>
+
+<p>
+<strong>Exercise 4-10.</strong>&nbsp; An alternate organization uses
+<tt>getline</tt> to read an entire input line; this makes <tt>getch</tt> and
+<tt>ungetch</tt> unnecessary. Revise the calculator to use this approach.</p>
+
+<p>
+<strong>Exercise 4-11.</strong>&nbsp; Modify <tt>getop</tt> so that it doesn't need to use 
+<tt>ungetch</tt>. Hint: use an internal <tt>static</tt> variable.
+&nbsp;<a href="krx411.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-12.</strong>&nbsp; Adapt the ideas of <tt>printd</tt> to write a recursive version 
+of <tt>itoa</tt>; that is, convert an integer into a string by calling a recursive routine.
+&nbsp;<a href="krx412.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-13.</strong>&nbsp; Write a recursive version of the function <tt>reverse(s)</tt>, 
+which reverses the string <tt>s</tt> in place.
+&nbsp;<a href="krx413.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 4-14.</strong>&nbsp; Define a macro <tt>swap(t,x,y)</tt> that
+interchanges two arguments of type <tt>t</tt>. (Block structure will help.)
+&nbsp;<a href="krx414.c">sol.c</a>
+&nbsp;<a href="krx414v2.c">sol2.c</a>
+&nbsp;<a href="krx414v3.c">sol3.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx3/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx5/index.html">next chapter</a>
+</p>
+
+</div>
+</body>
+</html>
+

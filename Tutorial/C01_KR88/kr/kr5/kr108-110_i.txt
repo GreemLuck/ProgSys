@@ -1,0 +1,7 @@
+dog and cat
+house, room
+a
+ this line starts with a space character (blank)
+z
+mouse
+apple

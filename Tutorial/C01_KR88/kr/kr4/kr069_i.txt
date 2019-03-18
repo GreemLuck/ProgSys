@@ -1,0 +1,22 @@
+This is a batch input text which can be used with the pattern searching 
+program kr069.c.
+
+Try the command :
+
+   % ./kr069 < ./kr069.c
+
+The lines that contain the pattern specified in the source code kr069.c will be 
+copied to the standard output.
+
+The original pattern defined in kr0969.c is "ould" (without the parentheses ").
+
+
+
+
+You can also try the command
+
+   % ./kr069 < ./kr069_i.txt  
+   
+xxxouldyyy  // to test several possible position of the pattern ould
+ouldyyy
+xxxould 

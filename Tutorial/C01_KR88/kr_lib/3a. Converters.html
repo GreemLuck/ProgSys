@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container"><p>
+
+<h3 align="center">3a. &nbsp; Converters</h3>
+
+<p><strong>int atoi(s). </strong>&nbsp; Convert string s to integer.<br>
+The test program <tt>kr043_t.c</tt> reads a word, converts it to integer, and prints it by adding 1.
+&nbsp;&nbsp;<a href="../kr/kr2/kr043.c">kr043.c</a>
+&nbsp;&nbsp;<a href="../kr/kr2/kr043_t.c">kr043_t.c</a></p>
+
+<p><strong>int lower(c). </strong>&nbsp; Convert character c to lower case.<br>
+The test program <tt>kr043_2_t.c</tt> reads a character, converts it to lower case, and prints it.
+&nbsp;&nbsp;<a href="../kr/kr2/kr043_2.c">kr043_2.c</a>
+&nbsp;&nbsp;<a href="../kr/kr2/kr043_2_t.c">kr043_2_t.c</a></p>
+
+<p><strong>int atoi(s) (version 2). </strong>&nbsp; Convert string s to integer.
+<br>This function is slightly more general than <a href="../kr/kr2/kr043.c">kr043.c</a>
+(see Chap. 2, p. 43): it also copes with leading white spaces and optional + or - sign.
+<br>The test program <tt>kr061_t.c</tt> reads a word, converts it to integer, and prints it by adding 1. 
+&nbsp;&nbsp;<a href="../kr/kr3/kr061.c">kr061.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr061_t.c">kr061_t.c</a></p>
+
+<p><strong>void itoa(n, s). </strong>&nbsp; Convert integer n to a string s.<br>
+The test program  <tt>kr064_t.c</tt> reads an integer, converts it to a string 
+using itoa(), and prints it. 
+&nbsp;&nbsp;<a href="../kr/kr3/kr064.c">kr064.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr064_t.c">kr064_t.c</a></p>
+
+<p><strong>double atof(s). </strong>&nbsp; Convert string s to its double-precision floating-point 
+equivalent.<br>
+The test program <tt>kr071_t</tt> reads a word, converts it to double, and prints it by adding 1.
+&nbsp;&nbsp;<a href="../kr/kr4/kr071.c">kr071.c</a>
+&nbsp;&nbsp;<a href="../kr/kr4/kr071_t.c">kr071_t.c</a></p>
+
+<p><strong>int atoi(s). </strong>&nbsp; Convert string s to an integer. <br>
+The test program <tt>kr073_t</tt> reads a word, converts it to integer, and prints it by adding 1
+&nbsp;&nbsp;<a href="../kr/kr4/kr073.c">kr073.c</a>
+&nbsp;&nbsp;<a href="../kr/kr4/kr073_t.c">kr073_t.c</a></p>
+
+<p><strong>int day_of_year(y,m,d). </strong>&nbsp; Return the day of the year from a given date.<br>
+The test program <tt>kr111_t</tt> reads three integers (for year, month and day) in the input, and 
+prints the day of the year. Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="../kr/kr5/kr111.c">kr111.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr111_t.c">kr111_t.c</a></p>
+
+<p><strong>void month_day(y,yd,&m,&d). </strong>&nbsp; Converts the day of the year into the month and day.<br>
+The test program <tt>kr111_2_t</tt> reads  two integers (for year and yearday) in the input, and 
+prints the month and the day. Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="../kr/kr5/kr111_2.c">kr111_2.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr111_2_t.c">kr111_2_t.c</a></p>
+
+<p><strong>char *month_name(n). </strong>&nbsp; Return a pointer to a character string containing 
+the name of the n-th month (with error treatment: if the month is not legal then "illegal month" is returned).<br>
+The test program <tt>kr113_t</tt> reads an integer (the n-th month) in the input, and prints the name of the month.
+&nbsp;&nbsp;<a href="../kr/kr5/kr113.c">kr113.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr113_t.c">kr113_t.c</a></p>
+
+<p><strong>From C Declarations to English Words. </strong>&nbsp; Convert C declarations to english words. 
+<br>Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="../kr/kr5/kr123-125.c">kr123-125.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr123-126_notice.txt">kr123-126_notice.txt</a></p>
+
+<p><strong>From English Words to C Declarations. </strong>&nbsp; Convert english words to C declarations. 
+<br>Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="../kr/kr5/kr124-126.c">kr124-126.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr123-126_notice.txt">kr123-126_notice.txt</a></p>
+
+<p><strong>Lower 2. </strong>&nbsp; 
+<br>The program <a href="../kr/kr7/kr153.c">kr153.c</a> converts its input to lower case.</p>
+
+
+<p>
+<a href="index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="2c. File Manip.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="3b. Storage Mgt.html">next chapter</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 
+2nd Edition, Prentice Hall 1988</p>
+
+<p>© B&eacute;at Hirsbrunner, DIUF, University of Fribourg, 2008</p></div>
+</body>
+</html>

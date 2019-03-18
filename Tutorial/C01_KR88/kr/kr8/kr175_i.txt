@@ -1,0 +1,38 @@
+01
+34
+67
+9A
+CD
+F
+
+----------------
+
+Beware that the result depends of the "end of file" format of the input file:
+
+   - Unix: LF ('\n'), line feed, one character
+   - Mac:  CR ('\r'), carriage return, one character
+   - Windows: CR followed by LF, two characters
+
+The original of this text file has been saved with Unix end of lines.
+
+Other interesting patterns to test are:
+
+6789
+345
+12
+0
+
+A12345678
+B12345678
+C12345678
+D12345678
+E12345678
+F12345678
+G12345678
+H12345678
+I12345678
+J12345678
+K12345678
+L12345678
+
+Beat Hirbrunner, University of Fribourg, Switzerland, 31 January 2008

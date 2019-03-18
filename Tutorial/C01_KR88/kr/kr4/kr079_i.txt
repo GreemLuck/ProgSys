@@ -1,0 +1,28 @@
+ga  // get a
+gb  // get b
+g   // get a blank space (hint: the buffer is empty)
+uc  // put c in the buffer
+ud  // put d in the buffer
+g   // get d from the buffer
+g   // get c from the buffer
+g   // get a blank space (hint: the buffer is empty)
+Q   // quit
+
+--------------------------------------------------------------------------------
+DESCRIPTION
+A batch input file for the getch/ungetch test program. 
+
+Note that this batch file has been provided mostly for documentation reasons: In general it is much better to run this test program interactively!
+
+The above commands will produce the following output:
+
+>character returned by getch: a
+>character returned by getch: b
+>character returned by getch:  
+>character added to the buffer: c
+>character added to the buffer: d
+>character returned by getch: d
+>character returned by getch: c
+>character returned by getch:  
+
+Author: B. Hirsbrunner, University of Fribourg, 24 January 2008

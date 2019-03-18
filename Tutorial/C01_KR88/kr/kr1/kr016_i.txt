@@ -1,0 +1,2 @@
+This text will be copied to the output.
+If you don't redirect the output, the standard output will be the console. 

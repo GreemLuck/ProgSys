@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container"><p>
+
+<h3 align="center">2b. &nbsp; String Manipulations</h3>
+
+<p><strong>int strlen(s). </strong>&nbsp; Return length of string s.<br>
+The test program <tt>kr039_t.c</tt> reads a word and prints its length. 
+&nbsp;&nbsp;<a href="../kr/kr2/kr039.c">kr039.c</a> 
+&nbsp;&nbsp;<a href="../kr/kr2/kr039_t.c">kr039_t.c</a></p> 
+
+<p><strong>void squeeze(s, c). </strong>&nbsp; Delete all c from s. 
+<br>The test program <tt>kr047_t.c</tt> reads a word w and a character c in input, deletes all c
+from w and prints the new word.
+&nbsp;&nbsp;<a href="../kr/kr2/kr047.c">kr047.c</a>  
+&nbsp;&nbsp;<a href="../kr/kr2/kr047_t.c">kr047_t.c</a></p>  
+
+<p><strong>void strcat(s,t). </strong>&nbsp; Concatenate string t to the end of string s.<br>
+The test program <tt>kr048_t.c</tt> reads two words, and prints their concatenation.<br>
+The second test program <tt>kr048_t2.c</tt> does the same, but reads two lines in input.
+&nbsp;&nbsp;<a href="../kr/kr2/kr048.c">kr048.c</a> 
+&nbsp;&nbsp;<a href="../kr/kr2/kr048_t.c">kr048_t.c</a>
+&nbsp;&nbsp;<a href="../kr/kr2/kr048_t2.c">kr048_t2.c</a></p>
+
+<p><strong>void reverse(s). </strong>&nbsp; Reverse string s.<br>
+The test program <tt>kr062_2_t.c</tt> reads a word, and prints it reversed.
+&nbsp;&nbsp;<a href="../kr/kr3/kr062_2.c">kr062_2.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr062_2_t.c">kr062_2_t.c</a></p>
+
+<p><strong>int trim(s). </strong>&nbsp;  Remove trailing blanks, tabs and newlines.<br>
+The test program <tt>kr065_t.c</tt> reads a line of characters, trims and prints it, until EOF is 
+encounterded.  As the removed characters are not observable on a screen, the test program prints 
+the additional character '$' at the end of 
+the trimed lines. 
+&nbsp;&nbsp;<a href="../kr/kr3/kr065.c">kr065.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr065_t.c">kr065_t.c</a></p>
+
+<p><strong>int strlen(s) &nbsp;(version 1). </strong>&nbsp; Return length of string s.<br>
+The test program <tt>kr099_t</tt> reads a line of characters (of maximum length MAX) from the input 
+and prints its length.
+&nbsp;&nbsp;<a href="../kr/kr5/kr099.c">kr099.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr099_t.c">kr099_t.c</a></p>
+
+<p><strong>int strlen(s) &nbsp;(version 2). </strong>&nbsp; Return the length of string s.<br>
+The test program <tt>kr103_t</tt> reads a line of characters (of maximum length MAX) from the 
+input and prints its length.
+&nbsp;&nbsp;<a href="../kr/kr5/kr103.c">kr103.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr103_t.c">kr103_t.c</a></p>
+
+<p><strong>void strcpy(s,t) &nbsp;(versions 1 to 4). </strong>&nbsp; Copy string t to s.<br>
+The test program <tt>kr105_t</tt> reads a line of characters t from the input, copies t to s, and 
+prints s (the four versions of <tt>strcpy</tt> are used).
+&nbsp;&nbsp;<a href="../kr/kr5/kr105-106.c">kr105-106.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr105-106_t.c">kr105-106_t.c</a></p>
+
+<p><strong>int strcmp(s, t) &nbsp;(versions 1 and 2). </strong>&nbsp; Compare the content of two 
+strings and return the ASCII distance of the two strings (< 0 if s < t, 0 if s == t, and > 0 if s > t.<br>
+The test program <tt>kr106_t</tt> reads two words from the input, compares them, and prints the 
+value returned by <tt>strcmp</tt> (both versions are used).
+&nbsp;&nbsp;<a href="../kr/kr5/kr106.c">kr106.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr106_t.c">kr106_t.c</a></p>
+
+
+<p>
+<a href="index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="2a. Char Manip.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="2c. File Manip.html">next chapter</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 
+2nd Edition, Prentice Hall 1988</p>
+
+<p>© B&eacute;at Hirsbrunner, DIUF, University of Fribourg, 2008</p></div>
+</body>
+</html>

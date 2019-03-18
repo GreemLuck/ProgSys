@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container"><p>
+
+<h3 align="center">2c. &nbsp; File Manipulations</h3>
+
+<p><strong>File Copy 1.</strong> &nbsp;Copy input to output.
+&nbsp;<a href="../kr/kr1/kr016.c">kr016.c</a></p>
+
+<p><strong>File Copy 2.</strong> &nbsp;Same as File Copy 1, using a variant of the while loop.
+&nbsp;<a href="../kr/kr1/kr017.c">kr017.c</a></p>
+
+<p><strong>File Access: </strong>&nbsp;Concatenation of n files.  
+<br>The program <a href="../kr/kr7/kr162.c">kr162.c</a> reads n files in input given as arguments in the command line, concatenates them and prints the result to the standard output. If no arguments are given in the command line, the standard input is readed and copied line per line to the standard output.
+<br>Synopsis: &nbsp;kr162 &nbsp; [ FILE ]</p>
+
+<p><strong>Error Handling - sdterr and exit. </strong>&nbsp;  
+<br>The program <a href="../kr/kr7/kr163.c">kr163.c</a> is a revised version of kr162.c, using stderr for error treatment.</p>
+
+<p><strong>char *fgets(*s, n, *f), &nbsp; int fputs(*s, *f): </strong>&nbsp; fgets reads the next n-1 characters into the string s, stopping if a newline is encountered and fputs writes the string s on stream f. Note that fgets returns NULL on end of file or error.
+<br>The program <a href="../kr/kr7/kr165.c">kr165.c</a> copies an input file to an output file.
+<br>Synopsis:  &nbsp;kr165 &nbsp; inputFILE &nbsp; outputFILE</p>
+
+
+<p>
+<a href="index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="2b. String Manip.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="3a. Converters.html">next chapter</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 
+2nd Edition, Prentice Hall 1988</p>
+
+<p>© B&eacute;at Hirsbrunner, DIUF, University of Fribourg, 2008</p></div>
+</body>
+</html>

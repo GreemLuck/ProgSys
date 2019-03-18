@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container"><p>
+
+<h3 align="center">4a. &nbsp; Search and Sort Algorithms</h3>
+
+<p><strong>Longest Line 1.</strong> &nbsp;Print longest input line.
+&nbsp;<a href="../kr/kr1/kr029.c">kr029.c</a></p>
+
+<p><strong>Longest Line 2.</strong> &nbsp;Same as 'Longest Line 1'; version with external variables.
+&nbsp;<a href="../kr/kr1/kr032.c">kr032.c</a></p>
+
+<p><strong>int binsearch(x, v, n). </strong>&nbsp; Search x in a sorted array v of integers,
+v[0] <= v[1] <= ../kr. v[n-1], and return the position if x occurs in v, and -1 if not.
+<br>- The first test program <tt>kr058_t</tt> reads the value x and a list of sorted integers, and prints the value of binsearch.
+<br>- The second test program <tt>kr058_t2</tt> is a variant, where the value x is given
+as argument in the command line (usage: ./kr058_t2 &nbsp;value_x).
+<br>- For fun and in order to test binsearch with a big list, <tt>kr058_gen.c</tt> provides a 
+simple generator of an ordered list of integers.
+<br><a href="../kr/kr3/kr058.c">kr058.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr058_t.c">kr058_t.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr058_t2.c">kr058_t2.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr058_i.txt">kr058_i.txt</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr058_i2.txt">kr058_i2.txt</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr058_gen.c">kr058_gen.c</a></p>
+
+<p><strong>void shellsort(v, n). </strong>&nbsp; Sort the integers v[0], ../kr., v[n-1] into 
+increasing order.
+<br>- The test program <tt>kr062_t.c</tt> reads a list of integers and prints it in increasing order.
+<br>- For fun and in order to test shellsort with a big list, <tt>kr062_gen.c</tt> provides a 
+simple generator of a pseudo-random list of integers.
+<br><a href="../kr/kr3/kr062.c">kr062.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr062_t.c">kr062_t.c</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr062_i.txt">kr062_i.txt</a>
+&nbsp;&nbsp;<a href="../kr/kr3/kr062_gen.c">kr062_gen.c</a></p>
+
+<p><strong>Pattern matching (version 0). </strong>&nbsp; Read a file, and print out all lines containing
+a given pattern (in this case the pattern is encoded in the program and is 'ould'; a more flexible 
+solution will be seen in chap. 5, pp. 116-117). The text file <tt>kr069_i.txt</tt> can be used as input. 
+&nbsp;&nbsp;<a href="../kr/kr4/kr069.c">kr069.c</a>  
+&nbsp;&nbsp;<a href="../kr/kr4/kr069_i.txt">kr069_i.txt</a></p>
+
+<p><strong>Recursion: qsort(v,left,right). </strong>&nbsp; Recursively sort an array of integers 
+using a quicksort algorithm.<br>
+The test program <tt>kr087_2_t</tt> reads a file of integers, sorts it, and prints the result. 
+&nbsp;&nbsp;<a href="../kr/kr4/kr087_2.c">kr087_2.c</a>
+&nbsp;&nbsp;<a href="../kr/kr4/kr087_2_t.c">kr087_2_t.c</a>
+&nbsp;&nbsp;<a href="../kr/kr4/kr087_2_i.txt">kr087_2_i.txt</a></p>
+
+<p><strong>Sort input lines (version 1). </strong>&nbsp; Sort a set of textlines into alphabetic order.<br>
+The program <tt>kr108-110.c</tt> reads a file, sorts it, and prints the result.
+&nbsp;&nbsp;<a href="../kr/kr5/kr108-110.c">kr108-110.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr108-110_i.txt">kr108-110_i.txt</a></p>
+
+<p><strong>Pattern matching (version 1).</strong>&nbsp; Read a file, and print out all lines containing a pattern 
+given as argument in the command line.
+<br>Synopsis: &nbsp;kr116 &nbsp;PATTERN
+<br><a href="../kr/kr5/kr116.c">kr116.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr116_i.txt">kr116_i.txt</a></p>
+
+<p><strong>Pattern matching (version 2). </strong>&nbsp; As version1, but accept two options: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-x : Invert the sense of matching, to select non-matching lines; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n : Prefix each line of output with the line number within its input file.
+<br> Synopsis: kr116 &nbsp;[-x] &nbsp;[-n] &nbsp;[-xn] &nbsp;[-nx] &nbsp;PATTERN
+<br><a href="../kr/kr5/kr117.c">kr117.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr117_i.txt">kr117_i.txt</a></p>
+
+<p><strong>Sort input lines (version 2). </strong>&nbsp; Sort a set of textlines into alphabetic or numeric 
+(option -n) order.<br>
+Synopsis: kr119-121 [-n]<br>
+The program <tt>kr119-121.c</tt> reads a file, sorts it (alphabetically, and with option -n numerically), 
+and prints the result.
+&nbsp;&nbsp;<a href="../kr/kr5/kr119-121.c">kr119-121.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr119-121_i.txt">kr119-121_i.txt</a></p>
+
+<p><strong>Keyword Counting 1. </strong>&nbsp; 
+<br>The program <a href="../kr/kr6/kr133-136.c">kr133-136.c</a> reads a file and prints the occurrences of C keywords. 
+&nbsp;&nbsp;<a href="../kr/kr6/kr133-136_i.txt">kr133-136_i.txt</a></p>
+  
+<p><strong>Keyword Counting 2. </strong>&nbsp;
+<br>The program <a href="../kr/kr6/kr137.c">kr137.c</a> reads a file and prints the occurrences of C keywords, using pointers instead of array indices.</p>
+
+<p><strong>Word Frequency Count 1. </strong>&nbsp; 
+<br>The program <a href="../kr/kr6/kr139-143.c">kr139-143.c</a> reads a text file and prints the occurrences of all words, using a tree data structure.</p>
+
+<p><strong>Table Lookup: </strong>&nbsp; Two classical primitives are provided:
+<br>&nbsp;&nbsp;-&nbsp;<strong><em>install(n,t)</em></strong> records the strings n (name) and t (replacement text) in a table, and 
+<br>&nbsp;&nbsp;-&nbsp;<strong><em>lookup(n)</em></strong> searches for n in the table.
+<br>The test program <a href="../kr/kr6/kr144-145_t.c">kr144-145_t.c</a> allows interactively to <em>install n and t</em> 
+(both restricted to words) and <em>lookup n</em>.</p>
+
+<p><strong>Word Frequency Count 2. </strong>&nbsp; 
+<br>The program <a href="../kr/kr6/kr146.c ">kr146.c </a> reads a text file and prints the occurrences of all words, this time using typedef for the tree nodes.</p>
+
+
+<p>
+<a href="index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="3b. Storage Mgt.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="4b. Math Functions.html">next chapter</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 
+2nd Edition, Prentice Hall 1988</p>
+
+<p>© B&eacute;at Hirsbrunner, DIUF, University of Fribourg, 2008</p></div>
+</body>
+</html>

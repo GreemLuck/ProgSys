@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Answers to Exercises</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+<h3 align="center">Chapter 2 - Types, Operators and Expressions</h3>
+
+<p>
+<strong>Exercise 2-1.</strong>&nbsp; Write a program to determine the ranges of <tt>char</tt>, <tt>short</tt>, <tt>int</tt>, and <tt>long</tt> variables, both <tt>signed</tt> and <tt>unsigned</tt>, by printing appropriate values from standard headers and by direct computation. Harder if you compute them: determine the ranges of the various floating-point types.
+&nbsp;<a href="krx201.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 2-2.</strong>&nbsp; Write a loop equivalent to the <tt>for</tt>
+loop above without using <tt>&amp;&amp;</tt> or <tt>||</tt>.
+&nbsp;<a href="krx202.c">sol.c</a>
+&nbsp;<a href="krx202v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 2-3.</strong>&nbsp; Write a function <tt>htoi(s)</tt>, which converts a string of hexadecimal digits (including an optional <tt>0x</tt> or <tt>0X</tt>) into its equivalent integer value. The allowable digits are <tt>0</tt> through <tt>9</tt>, <tt>a</tt> through <tt>f</tt>, and <tt>A</tt> through <tt>F</tt>.
+&nbsp;<a href="krx203.c">sol.c</a>
+&nbsp;<a href="krx203v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 2-4.</strong>&nbsp; Write an alternative version of <tt>squeeze(s1,s2)</tt> that deletes each character in <tt>s1</tt> that matches any character in the <em>string</em> <tt>s2</tt>.
+&nbsp;<a href="krx204.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 2-5.</strong>&nbsp; Write the function <tt>any(s1,s2)</tt>, which returns the first location in a string <tt>s1</tt> where any character from the string <tt>s2</tt> occurs, or <tt>-1</tt> if <tt>s1</tt> contains no characters from <tt>s2</tt>. (The standard library function <tt>strpbrk</tt> does the same job but returns a pointer to the location.)
+&nbsp;<a href="krx205.c">sol.c</a>
+&nbsp;<a href="krx205v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 2-6.</strong>&nbsp; Write a function <tt>setbits(x,p,n,y)</tt> that returns <tt>x</tt> with the <tt>n</tt> bits that begin at position <tt>p</tt> set to the rightmost <tt>n</tt> bits of <tt>y</tt>, leaving the other bits unchanged.
+&nbsp;<a href="krx206.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 2-7.</strong>&nbsp; Write a function <tt>invert(x,p,n)</tt> that returns <tt>x</tt> with the <tt>n</tt> bits that begin at position <tt>p</tt> inverted (i.e., 1 changed into 0 and vice versa), leaving the others unchanged.
+&nbsp;<a href="krx207.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 2-8.</strong>&nbsp; Write a function <tt>rightrot(x,n)</tt> that returns the value of the integer <tt>x</tt> rotated to the right by <tt>n</tt> positions.
+&nbsp;<a href="krx208.c">sol.c</a>
+&nbsp;<a href="krx208v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 2-9.</strong>&nbsp; In a two's complement number system, <tt>x &= (x-1)</tt>
+deletes the rightmost 1-bit in <tt>x</tt>. Explain why. Use this observation to
+write a faster version of <tt>bitcount</tt>.</p>
+
+<p>
+<strong>Exercise 2-10.</strong>&nbsp; Rewrite the function <tt>lower</tt>, which
+converts upper case letters to lower case, with a conditional expression
+instead of <tt>if-else</tt>.
+&nbsp;<a href="krx210.c">sol.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx1/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx3/index.html">next chapter</a>
+</p>
+</div>
+</body>
+</html>
+

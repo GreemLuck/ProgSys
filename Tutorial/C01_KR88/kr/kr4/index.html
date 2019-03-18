@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+<h3 align="center">Chapter 4 - Functions and Program structure</h3>
+
+<p><strong>Pattern matching (version 0). </strong>&nbsp; Read a file, and print out all lines containing
+a given pattern (in this case the pattern is encoded in the program and is 'ould'; a more flexible 
+solution will be seen in chap. 5, pp. 116-117). The text file <tt>kr069_i.txt</tt> can be used as input. 
+&nbsp;&nbsp;<a href="./kr069.c">kr069.c</a>  
+&nbsp;&nbsp;<a href="./kr069_i.txt">kr069_i.txt</a></p>
+
+<p><strong>int getline(s[], n) &nbsp;(version 2): </strong>&nbsp;  getline reads the next n-1 characters 
+into the string s, stopping if a newline is encountered. Note that getline returns the length of the readed 
+string s, or zero on end of file.
+<br>The test program <tt>kr069_2_t.c</tt> reads a file from the standard input, chunk by chunk, and prints 
+them to the standard output with their length. 
+&nbsp;&nbsp;<a href="./kr069_2_t.c">kr069_2_t.c</a></p>
+
+<p><strong>double atof(s). </strong>&nbsp; Convert string s to its double-precision floating-point 
+equivalent.<br>
+The test program <tt>kr071_t</tt> reads a word, converts it to double, and prints it by adding 1.
+&nbsp;&nbsp;<a href="./kr071.c">kr071.c</a>
+&nbsp;&nbsp;<a href="./kr071_t.c">kr071_t.c</a></p>
+
+<p><strong>Rudimentary calculator. </strong>&nbsp; Read one floating number per line, optionally 
+preceded by a sign, add them up, and print the running sum after each input. 
+&nbsp;&nbsp;<a href="./kr072.c">kr072.c</a></p>
+
+<p><strong>int atoi(s). </strong>&nbsp; Convert string s to an integer. <br>
+The test program <tt>kr073_t</tt> reads a word, converts it to integer, and prints it by adding 1
+&nbsp;&nbsp;<a href="./kr073.c">kr073.c</a>
+&nbsp;&nbsp;<a href="./kr073_t.c">kr073_t.c</a></p>
+
+
+<br>
+<p><strong>void push(f), double pop(void). </strong>&nbsp; A simple stack.<br>
+The test program <tt>kr077_t.c</tt> interactively pushes and pops floats. Note that some elementary error treatment are
+provided by push and pop, but not by the test program itself. A more appropriate way to do error treatment will
+be studied later, see <a href="../kr5/kr101-102_t2.c">kr101-102_t2.c</a>.<br>
+
+   <ul><em><font style="color:#FF1F19">- Remark: This is the first test program in this series where two primitives are tested concurrently. The schema is very different and should be studied very carefully!!!</font></em></ul>
+
+   <ul><em><font style="color:#FF1F19">- Remark 2: The text file <tt>kr077_i.txt</tt> can be used as a batch input file, and contains also a little explanation. This batch input file is a typical example for this kind of test program and should also be studied very carefully!!!</font></em></ul>
+
+<a href="./kr077.c">kr077.c</a>
+&nbsp;&nbsp;<a href="./kr077_t.c">kr077_t.c</a>
+&nbsp;&nbsp;<a href="./kr077_i.txt">kr077_i.txt</a></p>
+
+<p><strong>int getch(void), void ungetch(c). </strong>&nbsp; A simple buffer management.<br>
+The test program <tt>kr079_t.c</tt> interactively gets and ungets characters.  Note that some elementary error treatment is provided by ungetch, but not by the test program itself. The text file <tt>kr079_i.txt</tt> can be used as a batch input file, and contains also a little explanation.
+&nbsp;&nbsp;<a href="./kr079.c">kr079.c</a>
+&nbsp;&nbsp;<a href="./kr079_t.c">kr079_t.c</a>
+&nbsp;&nbsp;<a href="./kr079_i.txt">kr079_i.txt</a></p>
+
+<p><strong>int getop(s). </strong>&nbsp; Get next operator or numeric operand, using the above getch/ungetch "module".<br>
+The test program <tt>kr078-79_t.c</tt> reads a text of operators (+ - * / are allowed) and positive floating numbers;
+all other characters are interpreted as garbage.
+&nbsp;&nbsp;<a href="./kr078-79.c">kr078-79.c</a>
+&nbsp;&nbsp;<a href="./kr078-79_t.c">kr078-79_t.c</a></p>
+
+<p><strong>Reverse polish calculator. </strong>&nbsp; This program reads and evaluates arithmetic 
+expressions (the four operators + - * / are allowed), for positive floating numbers, 
+in postfix order, one per line. Example: <tt>2 3.1 4.1 - *</tt> stands for the more classical 
+infix expression <tt>2 * (3.1 - 4.1)</tt>. Note that no syntax error treatment is provided and 
+that only positive numbers are allowed. This program uses the above push/pop, getop and getch/ungetch "modules"
+&nbsp;&nbsp;<a href="./kr076-79.c">kr076-79.c</a></p>
+
+
+<br>
+<p><strong>Block structure. </strong>&nbsp; A very simple program illustrating the block 
+structure with a local variable declaration.<br>
+The test program <tt>kr084_t</tt> reads an integer n and prints the series 0 .. n-1.
+&nbsp;&nbsp;<a href="./kr084_t.c">kr084_t.c</a></p>
+
+<p><strong>Recursion: printd(n). </strong>&nbsp; A very simple program illustrating the recursion.<BR> 
+The test program <tt>kr087_1_t</tt> reads an integer and prints it recursively, character by character. 
+&nbsp;&nbsp;<a href="./kr087.c">kr087.c</a>
+&nbsp;&nbsp;<a href="./kr087_t.c">kr087_t.c</a></p>
+
+<p><strong>Recursion: qsort(v,left,right). </strong>&nbsp; Recursively sort an array of integers 
+using a quicksort algorithm.<br>
+The test program <tt>kr087_2_t</tt> reads a file of integers, sorts it, and prints the result. 
+&nbsp;&nbsp;<a href="./kr087_2.c">kr087_2.c</a>
+&nbsp;&nbsp;<a href="./kr087_2_t.c">kr087_2_t.c</a>
+&nbsp;&nbsp;<a href="./kr087_2_i.txt">kr087_2_i.txt</a></p>
+
+<p><strong>C Preprocessor: &nbsp;Macro Substitution. </strong>&nbsp; 
+<br>The program  <tt>kr089-91_t</tt> is not really a test program, but it should at least help you 
+to undestand the macro substitution in C, which seems to be trivial at first 
+glance, but has in fact to be handled with great care.
+&nbsp;&nbsp;<a href="./kr089-91_t.c">kr089-91_t.c</a></p>
+
+<p><strong>C Preprocessor: &nbsp;Conditional Inclusion. </strong>&nbsp; 
+<br>The program  <tt>kr091_t</tt> is not really a test program, but it should at least help you 
+to undestand the conditional inclusion in C.
+&nbsp;&nbsp;<a href="./kr091_t.c">kr091_t.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr3/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr5/index.html">next chapter</a></p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+<h3 align="center">Chapter 8 - The UNIX System Interface</h3>
+
+<p><em><strong>Notice. </strong>&nbsp; It is well known that test and validate low level IO primitives is really hard and complex. So most of the following programs will not test but just illustrate the use of some low level primitives discussed in this chapter.</em></p>
+
+<strong>read, write: </strong>&nbsp; Low level IO.
+<br>The program <a href="./kr171.c">kr171.c</a> copies input to  output, illustrating the use of the two system calls read and write.</p>
+
+<p><strong>int getchar(void) &nbsp; v1: </strong>&nbsp; Unbuffered single character input.
+<br>The program <a href="./kr171_2.c">kr171_2.c</a> copies input to output, illustrating how to construct higher-level routine, like getchar(), using the system calls read and write. The program reads and writes a character at a time.</p>
+
+<p><strong>int getchar(void) &nbsp; v2: </strong>&nbsp; Simple buffered character input.
+<br>The program <a href="./kr172.c">kr172.c</a> copies input to output, as  <a href="./kr171_2.c">kr171_2.c</a>, but using this time a buffered version of getchar(). The program reads input in chunk (typically 1024 Bytes) and writes a character at a time.</p>
+
+<p><strong>open, creat, close. </strong>&nbsp; 
+<br>The program <a href="./kr173-174.c">kr173-174.c</a> illustrates a simplified version of Unix' copy program <tt>cp</tt>, with error treatment.
+<br>Synopsis: &nbsp; ./kr173-174 &nbsp; input_file &nbsp; output_file &nbsp;</p>
+
+<p><strong>link, unlink. </strong>&nbsp; 
+<br>The program <a href="./kr174.c">kr174.c</a> illustrates a simplified version of Unix' move program <tt>mv</tt>. Notice: Be aware that this program works correctly only if both file names reside on the same file system!
+<br>Synopsis: &nbsp; ./kr174 &nbsp; input_file &nbsp; output_file &nbsp;</p>
+
+<p><strong>fseek: </strong>&nbsp; Random file access. 
+<br>The program <a href="./kr175.c">kr175.c</a> interactively asks a position p, seeks to it, and then reads and prints the character founded at p. The input_file has to be given as command line argument.
+<br>The text file <a href="./kr175_i.txt">kr175_i.txt</a> contains a little explanation and can be used as input file.
+<br>Synopsis: &nbsp; ./kr175 &nbsp; input_file</p>
+
+<p><strong>fopen, &nbsp; fclose, &nbsp; getc:</strong>&nbsp; An implementation of the standard library routines fopen, fclose and getc, using <a href="./my_stdio.h">my_stdio.h</a>.
+<br>The program <a href="./kr176-178.c">kr176-178.c</a> copies input file to output file (passed as arguments), using these low level primitives
+<br>Synopsis: ./kr176-178 &nbsp; input_file &nbsp; output_file</p>
+
+<p><strong>ls: </strong>&nbsp; A simplified version of Unix' listing program <tt>ls</tt>, using <a href="./my_dirent.h">my_dirent.h</a>. <br>
+The program <a href="./kr180-182.c">kr180-182.c</a> prints the size of all files mentioned in its command argument list.<br>
+Synopsis:  &nbsp; ./kr180-182 &nbsp; [ FILE ]</p>
+
+<!--<p><strong>malloc, &nbsp; free: </strong>&nbsp; A stack-oriented storage allocator. This is a real-life application with structures, unions and typedef.
+<br>The test program <a href="./kr185-188_t.c">kr185-188_t.c</a> interactively allocates and releases memory chunks. The text file <a href="./kr185-188_i.txt">kr185-188_i.txt</a> can be used as a batch input file for a first test, and contains also a little explanation.</p>-->
+
+
+
+
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr7/index.html">previous chapter</a></p>
+</div>
+</body>
+</html>

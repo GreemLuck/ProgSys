@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container"><p>
+
+<h3 align="center">5. &nbsp; IO and System Calls</h3>
+
+<p><em><strong>Notice. </strong>&nbsp; It is well known that test and validate low level IO primitives is really hard and complex. So most of the following programs will not test but just illustrate the use of some low level primitives discussed in this chapter.</em></p>
+
+<p><strong>int getline(s[], n) &nbsp;(version 1): </strong>&nbsp;  getline reads the next n-1 characters 
+into the string s, stopping if a newline is encountered. Note that getline returns the length of the readed 
+string s, or zero on end of file. 
+<br>The test program <tt>kr029_2_t.c</tt> reads a file from the standard input, chunk by chunk, 
+and prints them to the standard output with their length. &nbsp; <a href="../kr/kr7/kr029_2_t.c">kr029_2_t.c</a>
+</p>
+
+<p><strong>int getline(s[], n) &nbsp;(version 2): </strong>&nbsp;  getline reads the next n-1 characters 
+into the string s, stopping if a newline is encountered. Note that getline returns the length of the readed 
+string s, or zero on end of file.
+<br>The test program <tt>kr069_2_t.c</tt> reads a file from the standard input, chunk by chunk, 
+and prints them to the standard output with their length. &nbsp; <a href="../kr/kr7/kr069_2_t.c">kr069_2_t.c</a>
+</p>
+
+<p><strong>int getop(s). </strong>&nbsp; Get next operator or numeric operand, using the above getch/ungetch "module".<br>
+The test program <tt>kr078-79_t.c</tt> reads a text of operators (+ - * / are allowed) and positive floating numbers;
+all other characters are interpreted as garbage.
+&nbsp;&nbsp;<a href="../kr/kr4/kr078-79.c">kr078-79.c</a>
+&nbsp;&nbsp;<a href="../kr/kr4/kr078-79_t.c">kr078-79_t.c</a></p>
+
+<p><strong>int getint(&n). </strong>&nbsp; Perform free-format input conversion by breaking a stream 
+of characters into integer values, one integer per call. The function <tt>getint</tt> returns EOF 
+for end of file, zero if the next input is not a number, and a positive value if the input 
+contains a valid number. This is the scheme used by <tt>scanf</tt> as well, see Section 7.4.<br>
+The test program <tt>kr097_t</tt> reads integers by calls to getint, and prints them back.
+&nbsp;&nbsp;<a href="../kr/kr5/kr097.c">kr097.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr097_t.c">kr097_t.c</a></p>
+
+<p><strong>Formatted Output. </strong>&nbsp; 
+<br>The program <a href="../kr/kr7/kr154.c">kr154.c</a> illustrates a variety of specifications in printing "hello, world". </p>
+
+<p><strong>scanf: </strong>&nbsp; A simple scanf example.
+<br>The program <a href="../kr/kr7/kr159.c">kr159.c</a> reads a date form 25 dec 1988 and prints it, and then reads a date of form mm/dd/yy and prints it.</p> 
+
+<p><strong>sscanf:</strong>&nbsp; A simple sscanf example.
+<br>The program <a href="../kr/kr7/kr159_2.c">kr159_2.c</a> reads a date in input, one per line, and checks with sscanf whether the input is a valid date form (accepted forms: 25 dec 1988, mm/dd/yy), and prints them. Note that this program is not fully error free, as for example the input <tt>3/3/3 2</tt> will be interpreted as a valid form of the first form: <tt>3 /3/3 2</tt></p> 
+
+<p><strong>char *fgets(*s, n, *f), &nbsp; int fputs(*s, *f): </strong>&nbsp; fgets reads the next n-1 characters into the string s, stopping if a newline is encountered and fputs writes the string s on stream f. Note that fgets returns NULL on end of file or error.
+<br>The program <a href="../kr/kr7/kr165.c">kr165.c</a> copies an input file to an output file.
+<br>Synopsis:  &nbsp;kr165 &nbsp; inputFILE &nbsp; outputFILE</p>
+
+<p><strong>int getline(*s, n) &nbsp;(version 3): </strong>&nbsp;  getline reads the next n-1 characters into the string s, stopping if a newline is encountered. Note that getline returns, unlike fgets, the length of the readed string s, or zero on end of file.
+<br>The test program <a href="../kr/kr7/kr165_2_t.c">kr165_2_t.c</a> reads a file from the standard input, chunk by chunk of maximum length n-1 given as argument in the command line, and prints them to the standard output with their length.
+<br>Synopsis:  &nbsp; kr165 &nbsp; n</p>
+
+<strong>read, write: </strong>&nbsp; Low level IO.
+<br>The program <a href="../kr/kr8/kr171.c">kr171.c</a> copies input to  output, illustrating the use of the two system calls read and write.</p>
+
+<p><strong>int getchar(void) &nbsp; v1: </strong>&nbsp; Unbuffered single character input.
+<br>The program <a href="../kr/kr8/kr171_2.c">kr171_2.c</a> copies input to output, illustrating how to construct higher-level routine, like getchar(), using the system calls read and write. The program reads and writes a character at a time.</p>
+
+<p><strong>int getchar(void) &nbsp; v2: </strong>&nbsp; Simple buffered character input.
+<br>The program <a href="../kr/kr8/kr172.c">kr172.c</a> copies input to output, as  <a href="labs/kr/kr8/kr171_2.c">kr171_2.c</a>, but using this time a buffered version of getchar(). The program reads input in chunk (typically 1024 Bytes) and writes a character at a time.</p>
+
+<p><strong>open, creat, close. </strong>&nbsp; 
+<br>The program <a href="../kr/kr8/kr173-174.c">kr173-174.c</a> illustrates a simplified version of Unix' copy program <tt>cp</tt>, with error treatment.
+<br>Synopsis: &nbsp; ./kr173-174 &nbsp; input_file &nbsp; output_file &nbsp;</p>
+
+<p><strong>link, unlink. </strong>&nbsp; 
+<br>The program <a href="../kr/kr8/kr174.c">kr174.c</a> illustrates a simplified version of Unix' move program <tt>mv</tt>. Notice: Be aware that this program works correctly only if both file names reside on the same file system!
+<br>Synopsis: &nbsp; ./kr174 &nbsp; input_file &nbsp; output_file &nbsp;</p>
+
+<p><strong>fseek: </strong>&nbsp; Random file access. 
+<br>The program <a href="../kr/kr8/kr175.c">kr175.c</a> interactively asks a position p, seeks to it, and then reads and prints the character founded at p. The input_file has to be given as command line argument.
+<br>The text file <a href="../kr/kr8/kr175_i.txt">kr175_i.txt</a> contains a little explanation and can be used as input file.
+<br>Synopsis: &nbsp; ./kr175 &nbsp; input_file</p>
+
+<p><strong>fopen, &nbsp; fclose, &nbsp; getc:</strong>&nbsp; An implementation of the standard library routines fopen, fclose and getc, using <a href="../kr/kr8/my_stdio.h">my_stdio.h</a>.
+<br>The program <a href="../kr/kr8/kr176-178.c">kr176-178.c</a> copies input file to output file (passed as arguments), using these low level primitives
+<br>Synopsis: ./kr176-178 &nbsp; input_file &nbsp; output_file</p>
+
+<p><strong>ls: </strong>&nbsp; A simplified version of Unix' listing program <tt>ls</tt>, using <a href="../kr/kr8/my_dirent.h">my_dirent.h</a>. <br>
+The program <a href="../kr/kr8/kr180-182.c">kr180-182.c</a> prints the size of all files mentioned in its command argument list.<br>
+Synopsis:  &nbsp; ./kr180-182 &nbsp; [ FILE ]</p>
+
+
+<p>
+<a href="index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="4b. Math Functions.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="6. Miscellaneous.html">next chapter</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 
+2nd Edition, Prentice Hall 1988</p>
+
+<p>© B&eacute;at Hirsbrunner, DIUF, University of Fribourg, 2008</p></div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<h3 align="center">Chapter 6 - Structures</h3>
+
+
+<p><strong>Point and Rectangle Structures. </strong>&nbsp; 
+<br>The test program <a href="./kr128-129_t.c">kr128-129_t.c</a> reads two points defining a rectangle and prints the two points, their distance and the surface of the rectangle.</p>
+
+<p><strong>makepoint(x,y), addpoint(p1,p2), ptinrect(p, rect). </strong>&nbsp; <br>The test program <a href="./kr130_t.c">kr130_t.c</a> reads two points defining a rectangle and prints their sum, then reads two points and tests if they are inside the rectangle or not.</p>
+
+<p><strong>canonrect(rect). </strong>&nbsp; 
+<br>The test program <a href="./kr131_t.c">kr131_t.c</a> reads two points defining a rectangle and prints the coordinates in canonical form (lower-left, upper-right). </p>
+
+<p><strong>Pointer to Structure 1: </strong>&nbsp; How to access structure variables via pointers.
+<br>The program <a href="./kr131_2.c">kr131_2.c</a> reads two integers defining a point and prints them.</p>
+
+<p><strong>Pointer to Structure 2: </strong>&nbsp; An alternative notation with the structure operator ->
+<br>The program <a href="./kr131_3.c">kr131_3.c</a> reads two integers defining a corner of a rectangle and prints them using four different notations (access to structure variables either by name or pointer).</p>
+
+<p><strong>Pointer to Structure 3: </strong>&nbsp; About the high order binding of the structure operators . and ->
+<br>The program <a href="./kr132.c">kr132.c</a> reads an integer and prints it incremented by one.</p>
+
+<p><strong>Keyword Counting 1. </strong>&nbsp; 
+<br>The program <a href="./kr133-136.c">kr133-136.c</a> reads a file and prints the occurrences of C keywords. 
+&nbsp;&nbsp;<a href="./kr133-136_i.txt">kr133-136_i.txt</a></p>
+  
+<p><strong>Keyword Counting 2. </strong>&nbsp;
+<br>The program <a href="./kr137.c">kr137.c</a> reads a file and prints the occurrences of C keywords, using pointers instead of array indices.</p>
+
+<p><strong>Size of a structure and alignement problem. </strong>&nbsp; 
+<br>The program <a href="./kr138.c">kr138.c</a> illustrates the alignement problem within structures showing that a structure containing a char (1 byte) and an integer (typically 4 bytes on a 32 bits machine) requires 8 bytes.</p>
+
+<p><strong>Word Frequency Count 1. </strong>&nbsp; 
+<br>The program <a href="./kr139-143.c">kr139-143.c</a> reads a text file and prints the occurrences of all words, using a tree data structure.</p>
+
+<p><strong>Table Lookup: </strong>&nbsp; Two classical primitives are provided:
+<br>&nbsp;&nbsp;-&nbsp;<strong><em>install(n,t)</em></strong> records the strings n (name) and t (replacement text) in a table, and 
+<br>&nbsp;&nbsp;-&nbsp;<strong><em>lookup(n)</em></strong> searches for n in the table.
+<br>The test program <a href="./kr144-145_t.c">kr144-145_t.c</a> allows interactively to <em>install n and t</em> 
+(both restricted to words) and <em>lookup n</em>.</p>
+
+<p><strong>Word Frequency Count 2. </strong>&nbsp; 
+<br>The program <a href="./kr146.c ">kr146.c </a> reads a text file and prints the occurrences of all words, this time using typedef for the tree nodes.</p>
+
+<p><strong>Union 1: </strong>&nbsp; A simple example of an union that holds four different types: a character, integer, float and pointer to char. 
+<br>The test program <a href="./kr147-148_t.c">kr147-148_t.c</a> reads  a character, integer, float and word and prints their address, size and value.</p>
+
+<p><strong>Union 2: </strong>&nbsp; A simple example of an union within a structure array that holds four different types: a character, integer, float and pointer to char. 
+<br>The test program <a href="./kr148_t.c">kr148_t.c</a> reads  a character, integer, float and word and prints their address, size and value.</br>
+ </p>
+
+<p><strong>Mask: </strong>&nbsp; A simple mask.
+<br>The program <a href="./kr149.c">kr149.c</a> illustrates two simple mask expressions.</p>
+
+<p><strong>Bit-Fields: </strong>&nbsp; A simple bit-field.
+<br>The program <a href="./kr150.c">kr150.c</a> illustrates a simple bit-fields example.</p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr5/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr7/index.html">next chapter</a></p>
+
+</div>
+</body>
+</html>

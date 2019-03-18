@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+<h3 align="center">Chapter 5 - Pointers and Arrays</h3>
+
+
+<p><strong>Pointers and Addresses. </strong>&nbsp; <br>
+The program <tt>kr094_t</tt> illustrates the declaration of pointers and how to use * and &.
+&nbsp;&nbsp;<a href="./kr094_t.c">kr094_t.c</a></p>
+
+<p><strong>void swap(int x,int y). </strong>&nbsp; Swap two integers.<br>
+The test program <tt>kr095_t</tt> reads two integers, swaps them, and prints the result. As 
+awaited, the result is wrong. 
+&nbsp;&nbsp;<a href="./kr095.c">kr095.c</a>
+&nbsp;&nbsp;<a href="./kr095_t.c">kr095_t.c</a></p>
+
+<p><strong>void swap(int *x,int *y). </strong>&nbsp; Swap two integers using pointers.<br>
+The test program <tt>kr096_t</tt> reads two integers, swaps them and print the result. 
+&nbsp;&nbsp;<a href="./kr096.c">kr096.c</a>
+&nbsp;&nbsp;<a href="./kr096_t.c">kr096_t.c</a></p>
+
+<p><strong>int getint(&n). </strong>&nbsp; Perform free-format input conversion by breaking a stream 
+of characters into integer values, one integer per call. The function <tt>getint</tt> returns EOF 
+for end of file, zero if the next input is not a number, and a positive value if the input 
+contains a valid number. This is the scheme used by <tt>scanf</tt> as well, see Section 7.4.<br>
+The test program <tt>kr097_t</tt> reads integers by calls to getint, and prints them back.
+&nbsp;&nbsp;<a href="./kr097.c">kr097.c</a>
+&nbsp;&nbsp;<a href="./kr097_t.c">kr097_t.c</a></p>
+
+<p><strong>int strlen(s) &nbsp;(version 1). </strong>&nbsp; Return length of string s.<br>
+The test program <tt>kr099_t</tt> reads a line of characters (of maximum length MAX) from the input 
+and prints its length.
+&nbsp;&nbsp;<a href="./kr099.c">kr099.c</a>
+&nbsp;&nbsp;<a href="./kr099_t.c">kr099_t.c</a></p>
+
+<p><strong>char *alloc(n), &nbsp;void afree(p). </strong>&nbsp; Allocate memory (alloc) and release it 
+(afree).<br>
+- Test program <tt>kr101-102_t</tt> allocates and releases memory chunks interactively, without 
+error treatment.<br>
+- Test program <tt>kr101-102_t2</tt> allocates and releases memory chunks interactively, with 
+exhaustive error treatment.<br>
+- <em><font style="color:#FF1F19">Remark: This is the first test program in this series where two 
+primitives are tested concurrently with exhaustive error treatment. It should be studied very carefully!!!</font></em>
+<br><a href="./kr101-102.c">kr101-102.c</a>
+&nbsp;&nbsp;<a href="./kr101-102_t.c">kr101-102_t.c</a>
+&nbsp;&nbsp;<a href="./kr101-102_t2.c">kr101-102_t2.c</a></p>
+
+<p><strong>int strlen(s) &nbsp;(version 2). </strong>&nbsp; Return the length of string s.<br>
+The test program <tt>kr103_t</tt> reads a line of characters (of maximum length MAX) from the 
+input and prints its length.
+&nbsp;&nbsp;<a href="./kr103.c">kr103.c</a>
+&nbsp;&nbsp;<a href="./kr103_t.c">kr103_t.c</a></p>
+
+<p><strong>void strcpy(s,t) &nbsp;(versions 1 to 4). </strong>&nbsp; Copy string t to s.<br>
+The test program <tt>kr105_t</tt> reads a line of characters t from the input, copies t to s, and 
+prints s (the four versions of <tt>strcpy</tt> are used).
+&nbsp;&nbsp;<a href="./kr105-106.c">kr105-106.c</a>
+&nbsp;&nbsp;<a href="./kr105-106_t.c">kr105-106_t.c</a></p>
+
+<p><strong>int strcmp(s, t) &nbsp;(versions 1 and 2). </strong>&nbsp; Compare the content of two 
+strings and return the ASCII distance of the two strings (< 0 if s < t, 0 if s == t, and > 0 if s > t.<br>
+The test program <tt>kr106_t</tt> reads two words from the input, compares them, and prints the 
+value returned by <tt>strcmp</tt> (both versions are used).
+&nbsp;&nbsp;<a href="./kr106.c">kr106.c</a>
+&nbsp;&nbsp;<a href="./kr106_t.c">kr106_t.c</a></p>
+
+<p><strong>Sort input lines (version 1). </strong>&nbsp; Sort a set of textlines into alphabetic order.<br>
+The program <tt>kr108-110.c</tt> reads a file, sorts it, and prints the result.
+&nbsp;&nbsp;<a href="./kr108-110.c">kr108-110.c</a>
+&nbsp;&nbsp;<a href="./kr108-110_i.txt">kr108-110_i.txt</a></p>
+
+<p><strong>int day_of_year(y,m,d). </strong>&nbsp; Return the day of the year from a given date.<br>
+The test program <tt>kr111_t</tt> reads three integers (for year, month and day) in the input, and 
+prints the day of the year. Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="./kr111.c">kr111.c</a>
+&nbsp;&nbsp;<a href="./kr111_t.c">kr111_t.c</a></p>
+
+<p><strong>void month_day(y,yd,&m,&d). </strong>&nbsp; Converts the day of the year into the month and day.<br>
+The test program <tt>kr111_2_t</tt> reads  two integers (for year and yearday) in the input, and 
+prints the month and the day. Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="./kr111_2.c">kr111_2.c</a>
+&nbsp;&nbsp;<a href="./kr111_2_t.c">kr111_2_t.c</a></p>
+
+<p><strong>char *month_name(n). </strong>&nbsp; Return a pointer to a character string containing 
+the name of the n-th month (with error treatment: if the month is not legal then "illegal month" is returned).<br>
+The test program <tt>kr113_t</tt> reads an integer (the n-th month) in the input, and prints the name of the month.
+&nbsp;&nbsp;<a href="./kr113.c">kr113.c</a>
+&nbsp;&nbsp;<a href="./kr113_t.c">kr113_t.c</a></p>
+
+<p><strong>Command line arguments (versions 1 and 2). </strong>&nbsp; Copy the command line arguments to the output.
+<br>Synopsis: &nbsp;kr115 &nbsp;[args]
+<br><a href="./kr115.c">kr115.c</a>
+&nbsp;&nbsp;<a href="./kr115_2.c">kr115_2.c</a></p>
+
+<p><strong>Pattern matching (version 1).</strong>&nbsp; Read a file, and print out all lines containing a pattern 
+given as argument in the command line.
+<br>Synopsis: &nbsp;kr116 &nbsp;PATTERN
+<br><a href="./kr116.c">kr116.c</a>
+&nbsp;&nbsp;<a href="./kr116_i.txt">kr116_i.txt</a></p>
+
+<p><strong>Pattern matching (version 2). </strong>&nbsp; As version1, but accept two options: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-x : Invert the sense of matching, to select non-matching lines; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-n : Prefix each line of output with the line number within its input file.
+<br> Synopsis: kr116 &nbsp;[-x] &nbsp;[-n] &nbsp;[-xn] &nbsp;[-nx] &nbsp;PATTERN
+<br><a href="./kr117.c">kr117.c</a>
+&nbsp;&nbsp;<a href="./kr117_i.txt">kr117_i.txt</a></p>
+
+<p><strong>Sort input lines (version 2). </strong>&nbsp; Sort a set of textlines into alphabetic or numeric 
+(option -n) order.<br>
+Synopsis: kr119-121 [-n]<br>
+The program <tt>kr119-121.c</tt> reads a file, sorts it (alphabetically, and with option -n numerically), 
+and prints the result.
+&nbsp;&nbsp;<a href="./kr119-121.c">kr119-121.c</a>
+&nbsp;&nbsp;<a href="./kr119-121_i.txt">kr119-121_i.txt</a></p>
+
+<p><strong>From C Declarations to English Words. </strong>&nbsp; Convert C declarations to english words. 
+<br>Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="./kr123-125.c">kr123-125.c</a>
+&nbsp;&nbsp;<a href="./kr123-126_notice.txt">kr123-126_notice.txt</a></p>
+
+<p><strong>From English Words to C Declarations. </strong>&nbsp; Convert english words to C declarations. 
+<br>Note that no error treatment is provided.
+&nbsp;&nbsp;<a href="./kr124-126.c">kr124-126.c</a>
+&nbsp;&nbsp;<a href="./kr123-126_notice.txt">kr123-126_notice.txt</a></p>
+
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr4/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr6/index.html">next chapter</a></p>
+
+</div>
+</body>
+</html>

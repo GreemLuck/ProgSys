@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Answers to Exercises</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+<h3 align="center">Chapter 5 - Pointers and Arrays</h3>
+<p>
+<strong>Exercise 5-1.</strong>&nbsp; As written, <tt>getint</tt> treats a
+<tt>+</tt> or <tt>-</tt> not followed by a digit as a valid representation of
+zero. Fix it to push such a character back on the input.
+&nbsp;<a href="krx501.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-2.</strong>&nbsp; Write <tt>getfloat</tt>, the floating-point
+analog of <tt>getint</tt>. What type does <tt>getfloat</tt> return as its
+function value?
+&nbsp;<a href="krx502.c">sol.c</a>
+&nbsp;<a href="krx502v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 5-3.</strong>&nbsp; Write a pointer version of the function
+<tt>strcat</tt> that we showed in Chapter 2: <tt>strcat(s,t)</tt> copies the string <tt>t</tt> to 
+the end of <tt>s</tt>.
+&nbsp;<a href="krx503.c">sol.c</a>
+&nbsp;<a href="krx503v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 5-4.</strong>&nbsp; Write the function <tt>strend(s,t)</tt>, which
+returns 1 if the string <tt>t</tt> occurs at the end of the string <tt>s</tt>,
+and zero otherwise.
+&nbsp;<a href="krx504.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-5.</strong>&nbsp; Write versions of the library functions
+<tt>strncpy</tt>, <tt>strncat</tt>, and <tt>strncmp</tt>, which operate on at
+most the first <tt>n</tt> characters of their argument strings. For example,
+<tt>strncpy(s,t,n)</tt> copies at most <tt>n</tt> characters of <tt>t</tt> to
+<tt>s</tt>. Full descriptions are in Appendix B.
+&nbsp;<a href="krx505.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-6.</strong>&nbsp; Rewrite appropriate programs from earlier
+chapters and exercises with pointers instead of array indexing. Good
+possibilities include <tt>getline</tt> (Chapters 1 and 4), <tt>atoi</tt>, <tt>itoa</tt>, and their 
+variants (Chapters 2, 3, and 4), <tt>reverse</tt> (Chapter 3), and <tt>strindex</tt> and 
+<tt>getop</tt> (Chapter 4).
+&nbsp;<a href="krx506.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-7.</strong>&nbsp; Rewrite <tt>readlines</tt> to store lines in
+an array supplied by <tt>main</tt>, rather than calling <tt>alloc</tt> to
+maintain storage. How much faster is the program?
+&nbsp;<a href="krx507.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-8.</strong>&nbsp; There is no error checking in <tt>day_of_year</tt> or 
+<tt>month_day</tt>. Remedy this defect.
+&nbsp;<a href="krx508.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-9.</strong>&nbsp; Rewrite the routines <tt>day_of_year</tt> and
+<tt>month_day</tt> with pointers instead of indexing.
+&nbsp;<a href="krx509.c">sol.c</a>
+&nbsp;<a href="krx509v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 5-10.</strong>&nbsp; Write the program <tt>expr</tt>, which
+evaluates a reverse Polish expression from the command line, where each
+operator or operand is a separate argument. For example,</p>
+<pre>
+   expr 2 3 4 + *
+</pre>
+<p>evaluates 2 * (3+4).
+&nbsp;<a href="krx510.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-11.</strong>&nbsp; Modify the program <tt>entab</tt> and <tt>detab</tt> (written as 
+exercises in Chapter 1) to accept a list of tab stops as arguments. Use the default tab settings 
+if there are no arguments.
+&nbsp;<a href="krx511.c">sol.c</a>
+&nbsp;<a href="krx511v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 5-12.</strong>&nbsp; Extend <tt>entab</tt> and <tt>detab</tt> to
+accept the shorthand</p>
+<pre>
+   entab <em>-m +n</em>
+</pre>
+<p>to mean tab stops every <em>n</em> columns, starting at column <em>m</em>. Choose
+convenient (for the user) default behavior.</p>
+
+<p>
+<strong>Exercise 5-13.</strong>&nbsp; Write the program <tt>tail</tt>, which prints
+the last <em>n</em> lines of its input. By default, <em>n</em> is set to 10,
+let us say, but it can be changed by an optional argument so that</p>
+<pre>
+   tail <em>-n</em>
+</pre>
+<p>prints the last <em>n</em> lines. The program should behave rationally no matter
+how unreasonable the input or the value of <em>n</em>. Write the program so it
+makes the best use of available storage; lines should be stored as in the
+sorting program of Section 5.6, not in a two-dimensional array of fixed size.
+&nbsp;<a href="krx513.c">sol.c</a>
+&nbsp;<a href="krx513v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 5-14.</strong>&nbsp; Modify the sort program to handle a <tt>-r</tt>
+flag, which indicates sorting in reverse (decreasing) order. Be sure that
+<tt>-r</tt> works with <tt>-n</tt>.
+&nbsp;<a href="krx514.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 5-15.</strong>&nbsp; Add the option <tt>-f</tt> to fold upper and lower case together, 
+so that case distinctions are not made during sorting; for
+example, <tt>a</tt> and <tt>A</tt> compare equal.</p>
+
+<p>
+<strong>Exercise 5-16.</strong>&nbsp; Add the <tt>-d</tt> (''directory order'') option, which makes 
+comparisons only on letters, numbers and blanks. Make sure it works in conjunction with  <tt>-f</tt>.
+
+<p>
+<strong>Exercise 5-17.</strong>&nbsp; Add a field-searching capability, so sorting may bee done on 
+fields within lines, each field sorted according to an independent set of options. (The index for 
+this book was sorted with <tt>-df</tt> for the index category and <tt>-n</tt> for the page numbers.)</p>
+
+<p>
+<strong>Exercise 5-18.</strong>&nbsp; Make <tt>dcl</tt> recover from input errors.</p>
+
+<p>
+<strong>Exercise 5-19.</strong>&nbsp; Modify <tt>undcl</tt> so that it does not add
+redundant parentheses to declarations.</p>
+
+<p>
+<strong>Exercise 5-20.</strong>&nbsp; Expand <tt>dcl</tt> to handle declarations with
+function argument types, qualifiers like <tt>const</tt>, and so on.</p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx4/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx6/index.html">next chapter</a>
+</p>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+Usage Notice: kr123-125 (decl) and kr124-126 (undecl)
+=====================================================
+
+Following examples, borrowed from kr122-123 and kr126, illustrate the decl und 
+undecl programs.
+
+Note that no error treatment is provided, and that the input has to be given  
+exactly one line per line (terminated by '\n'). The token can be separated by 
+blanks ' ' or tabs '\t', but no other characters as the one neccessary for the 
+declaration are allowed.
+
+The inputs must be read from the terminal. Hint: the function gettoken() 
+doesn't correctly handle end of lines of Unix/Windows/OSX end of lines.
+
+
+
+----------------
+kr123-125 (decl)
+----------------
+
+Input                      Output
+-----                      ------
+char **argv                argv: pointer to pointer to  char
+
+int (*daytab)[13]          daytab: pointer to  array[13] of int
+
+int *daytab[13]            daytab:  array[13] ofpointer to  int
+
+
+void *comp()               comp:  function returning pointer to  void
+
+void (*comp)()             comp: pointer to  function returning  void
+
+
+char (*(*x())[])()         x:  function returning pointer to  array[] ofpointer 
+                           to  function returning  char
+
+char (*(*x[3])())[5]       x:  array[3] ofpointer to  function returning pointer
+                           to  array[5] of char
+
+
+void (*pfa[])()            pfa:  array[] ofpointer to  function returning  void
+
+char (*(*x())[])()         x:  function returning pointer to  array[] ofpointer 
+                           to  function returning  char
+
+
+
+------------------
+kr124-126 (undecl)
+------------------
+
+Input                      Output
+-----                      ------
+argv * * char              char (*(*argv))
+
+daytab * [13] int          int (*daytab)[13]
+
+daytab [13] * int          int (*daytab[13])
+
+
+comp () * void             void (*comp())
+
+void (*comp)()             comp (*void)()
+
+
+x * () * [] () char        char (*(*x)())[]()
+
+x [3] * () * [5] char      char (*(*x[3])())[5]
+
+
+pfa [] * () void           void (*pfa[])()
+
+x () * [] * () char        char (*(*x())[])()
+
+
+
+Beat Hirsbrunner, January 2008

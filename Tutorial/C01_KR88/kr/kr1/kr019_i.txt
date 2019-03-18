@@ -1,0 +1,6 @@
+This
+text
+file
+contains
+6
+lines.

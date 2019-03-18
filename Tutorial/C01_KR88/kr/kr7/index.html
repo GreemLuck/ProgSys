@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+
+<h3 align="center">Chapter 7 - Input and Output</h3>
+
+<p><strong>Lower 2. </strong>&nbsp; The program <a href="./kr153.c">kr153.c</a> converts its input to lower case.</p>
+
+<p><strong>Formatted Output. </strong>&nbsp; The program <a href="./kr154.c">kr154.c</a> illustrates a variety of specifications in printing "hello, world". </p>
+
+<p><strong>Variable-length Argument List. </strong>&nbsp; The program <a href="./kr156.c">kr156.c</a> reads a character, integer, float and word and prints them out with <tt>minprintf(s,...)</tt>, a minimal printf with a variable-length argument list.</p>
+
+<p><strong>Rudimentary Calculator 2. </strong>&nbsp; The program <a href="./kr158.c">kr158.c</a> reads long floats in input, adds them up, and prints the running sum after each input. </p>
+
+<p><strong>scanf: </strong>&nbsp; A simple scanf example.
+<br>The program <a href="./kr159.c">kr159.c</a> reads a date form 25 dec 1988 and prints it, and then reads a date of form mm/dd/yy and prints it.</p> 
+
+<p><strong>sscanf:</strong>&nbsp; A simple sscanf example.
+<br>The program <a href="./kr159_2.c">kr159_2.c</a> reads a date in input, one per line, and checks with sscanf whether the input is a valid date form (accepted forms: 25 dec 1988, mm/dd/yy), and prints them. Note that this program is not fully error free, as for example the input <tt>3/3/3 2</tt> will be interpreted as a valid form of the first form: <tt>3 /3/3 2</tt></p> 
+
+<p><strong>File Access: </strong>&nbsp;Concatenation of n files.  
+<br>The program <a href="./kr162.c">kr162.c</a> reads n files in input given as arguments in the command line, concatenates them and prints the result to the standard output. If no arguments are given in the command line, the standard input is readed and copied line per line to the standard output.
+<br>Synopsis: &nbsp;kr162 &nbsp; [ FILE ]</p>
+
+<p><strong>Error Handling - sdterr and exit. </strong>&nbsp; The program <a href="./kr163.c">kr163.c</a> is a revised version of kr162.c, using stderr for error treatment.</p>
+
+<p><strong>char *fgets(*s, n, *f), &nbsp; int fputs(*s, *f): </strong>&nbsp; fgets reads the next n-1 characters into the string s, stopping if a newline is encountered and fputs writes the string s on stream f. Note that fgets returns NULL on end of file or error.
+<br>The program <a href="./kr165.c">kr165.c</a> copies an input file to an output file.
+<br>Synopsis:  &nbsp;kr165 &nbsp; inputFILE &nbsp; outputFILE</p>
+
+<p><strong>int getline(*s, n) &nbsp;(version 3): </strong>&nbsp;  getline reads the next n-1 characters into the string s, stopping if a newline is encountered. Note that getline returns, unlike fgets, the length of the readed string s, or zero on end of file.
+<br>The test program <a href="./kr165_2_t.c">kr165_2_t.c</a> reads a file from the standard input, chunk by chunk of maximum length n-1 given as argument in the command line, and prints them to the standard output with their length.
+<br>Synopsis:  &nbsp; kr165 &nbsp; n </p>
+
+<p><strong>int getc(*f), int ungetc(c, *f) &nbsp;(version 2): </strong>&nbsp; A simple  buffer management, similar to the one studied in chapter 4, see <a href="labs/kr/kr4/kr079.c">kr079.c</a>: getc(f) returns the next character of stream f (or EOF if end of file or error ocurs) and ungetc(c,f) pushes c back onto stream f, where it will be returned on the next read (and returns the character pushed back, or EOF for error).
+<br>The test program <a href="./kr166_t.c">kr166_t.c</a> is similar to <a href="labs/kr/kr4/kr079_t.c">kr079_t.c</a> and interactively gets and ungets characters from an input file given as argument in the command line. Note that some elementary error treatment is provided by getc and ungetc, but not by the test program itself. The text file <a href="./kr166_i.txt">kr166_i.txt</a> can be used as input file.
+<br>Synopsis: &nbsp;kr166_t &nbsp; inputFILE</p>
+
+<p><strong>system(char *s): </strong>&nbsp; Execute the command contained in the string s.
+<br>The test program <a href="./kr167_t.c">kr167_t.c</a> reads UNIX command from the standard input and executes them. Hint: Try out simple ones as <tt>date</tt>, but also more complex ones as <tt>egrep -l MAX *.c</tt>.</p>
+
+<p><strong>malloc, calloc, free: </strong>&nbsp; Storage Management.
+<br>The program <a href="./kr167_2_t.c">kr167_2_t.c</a> allows to interactively test the three primitives malloc, calloc and free. The text file <a href="./kr167_2_i.txt">kr167_2_i.txt</a> can be used as a batch input file for a first test, and contains also a little explanation.</p>
+
+<p><strong>int rand(), &nbsp;void srand(seed) &nbsp;(version 2): </strong>&nbsp; Random Number Generator.
+<br>The test program <a href="./kr168_t.c">kr168_t.c</a> reads two integers s and n, and generates and prints a series of n pseudo-random numbers between 0 and 1 with seed s.</p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr6/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr8/index.html">next chapter</a></p>
+
+</div>
+</body>
+</html>

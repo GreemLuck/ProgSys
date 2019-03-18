@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+<h3 align="center">Chapter 3 - Control Flow</h3>
+
+<p><strong>int binsearch(x, v, n). </strong>&nbsp; Search x in a sorted array v of integers,
+v[0] <= v[1] <= ... v[n-1], and return the position if x occurs in v, and -1 if not.
+<br>- The first test program <tt>kr058_t</tt> reads the value x and a list of sorted integers, and prints the value of binsearch.
+<br>- The second test program <tt>kr058_t2</tt> is a variant, where the value x is given
+as argument in the command line (usage: ./kr058_t2 &nbsp;value_x).
+<br>- For fun and in order to test binsearch with a big list, <tt>kr058_gen.c</tt> provides a 
+simple generator of an ordered list of integers.
+<br><a ./kr058.c">kr058.c</a>
+&nbsp;&nbsp;<a href="./kr058_t.c">kr058_t.c</a>
+&nbsp;&nbsp;<a href="./kr058_t2.c">kr058_t2.c</a>
+&nbsp;&nbsp;<a href="./kr058_i.txt">kr058_i.txt</a>
+&nbsp;&nbsp;<a href="./kr058_i2.txt">kr058_i2.txt</a>
+&nbsp;&nbsp;<a href="./kr058_gen.c">kr058_gen.c</a></p>
+
+<p><strong>Count Digits, White Spaces and Others (version 2). </strong>&nbsp; The output will be 
+something like <tt>digit = 0 3 0 0 2 1 0 1 0 0, white space = 11, other = 49</tt>
+where three digits "1", two digits "4", one digit "5", one digit "7", 11 white spaces and 49 other characters have 
+been entered. This program is identical to <a href="labs/kr/kr1/kr022.c">kr022.c</a>
+(see Chap. 1, p. 22), but is implemented with a switch statement.
+&nbsp;&nbsp;<a href="./kr059.c">kr059.c</a></p>
+
+<p><strong>int atoi(s) (version 2). </strong>&nbsp; Convert string s to integer.
+<br>This function is slightly more general than <a href="../kr2/kr043.c">kr043.c</a>
+(see Chap. 2, p. 43): it also copes with leading white spaces and optional + or - sign.
+<br>The test program <tt>kr061_t.c</tt> reads a word, converts it to integer, and prints it by adding 1. 
+&nbsp;&nbsp;<a href="./kr061.c">kr061.c</a>
+&nbsp;&nbsp;<a href="./kr061_t.c">kr061_t.c</a></p>
+
+<p><strong>void shellsort(v, n). </strong>&nbsp; Sort the integers v[0], ..., v[n-1] into 
+increasing order.
+<br>- The test program <tt>kr062_t.c</tt> reads a list of integers and prints it in increasing order.
+<br>- For fun and in order to test shellsort with a big list, <tt>kr062_gen.c</tt> provides a 
+simple generator of a pseudo-random list of integers.
+<br><a href="./kr062.c">kr062.c</a>
+&nbsp;&nbsp;<a href="./kr062_t.c">kr062_t.c</a>
+&nbsp;&nbsp;<a href="./kr062_i.txt">kr062_i.txt</a>
+&nbsp;&nbsp;<a href="./kr062_gen.c">kr062_gen.c</a></p>
+
+<p><strong>void reverse(s). </strong>&nbsp; Reverse string s.<br>
+The test program <tt>kr062_2_t.c</tt> reads a word, and prints it reversed.
+&nbsp;&nbsp;<a href="./kr062_2.c">kr062_2.c</a>
+&nbsp;&nbsp;<a href="./kr062_2_t.c">kr062_2_t.c</a></p>
+
+<p><strong>void itoa(n, s). </strong>&nbsp; Convert integer n to a string s.<br>
+The test program  <tt>kr064_t.c</tt> reads an integer, converts it to a string 
+using itoa(), and prints it. 
+&nbsp;&nbsp;<a href="./kr064.c">kr064.c</a>
+&nbsp;&nbsp;<a href="./kr064_t.c">kr064_t.c</a></p>
+
+<p><strong>int trim(s). </strong>&nbsp;  Remove trailing blanks, tabs and newlines.<br>
+The test program <tt>kr065_t.c</tt> reads a line of characters, trims and prints it, until EOF is 
+encounterded.  As the removed characters are not observable on a screen, the test program prints 
+the additional character '$' at the end of 
+the trimed lines. 
+&nbsp;&nbsp;<a href="./kr065.c">kr065.c</a>
+&nbsp;&nbsp;<a href="./kr065_t.c">kr065_t.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr2/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr4/index.html">next chapter</a></p>
+
+</div>
+</body>
+</html>

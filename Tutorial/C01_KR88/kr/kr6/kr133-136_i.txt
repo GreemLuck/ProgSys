@@ -1,0 +1,38 @@
+In this file, all C keywords appear exactly once, except :
+    
+    - break and char which appear twice and
+    - void void while while which appear three times
+
+auto
+break
+case
+char
+const
+continue
+default
+do
+double
+else
+enum
+extern
+float
+for
+goto
+if
+int
+long
+register
+return
+short
+signed
+sizeof
+static
+struct
+switch
+typedef
+union
+unsigned
+void
+volatile
+while
+

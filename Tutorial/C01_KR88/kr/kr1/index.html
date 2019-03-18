@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+<h3 align="center">Chapter 1 - A Tutorial Introduction</h3>
+
+<p><strong>Hello World.</strong> &nbsp;Display "hello world".
+&nbsp;<a href="./kr006.c">kr006.c</a></p>
+
+<p><strong>Fahrenheit 1.</strong> &nbsp;Print Fahrenheit-Celsius table for fahr = 0, 20, ..., 300.
+&nbsp;<a href="./kr009.c">kr009.c</a></p>
+
+<p><strong>Fahrenheit 2.</strong> &nbsp;Same as Fahrenheit 1, but in floating point.
+&nbsp;<a href="./kr012.c">kr012.c</a></p>
+
+<p><strong>Fahrenheit 3.</strong> &nbsp;Same as Fahrenheit 2, but using a for loop.
+&nbsp;<a href="./kr013.c">kr013.c</a></p>
+
+<p><strong>Fahrenheit 4.</strong> &nbsp;Same as Fahrenheit 3, but using symbolic constants.
+&nbsp;<a href="./kr015.c">kr015.c</a></p>
+
+<p><strong>File Copy 1.</strong> &nbsp;Copy input to output.
+&nbsp;<a href="./kr016.c">kr016.c</a></p>
+
+<p><strong>File Copy 2.</strong> &nbsp;Same as File Copy 1, using a variant of the while loop.
+&nbsp;<a href="./kr017.c">kr017.c</a></p>
+
+<p><strong>Character Count 1.</strong> &nbsp;Count characters in input, using a while loop. The 
+number of characters is printed to the output.
+&nbsp;<a href="./kr018_1.c">kr018_1.c</a></p>
+
+<p><strong>Character Count 2.</strong> &nbsp;Same as Character Count 1, but using a for loop.
+&nbsp;<a href="./kr018_2.c">kr018_2.c</a></p>
+
+<p><strong>Line Count.</strong> &nbsp;Count lines in input. The number of lines is printed to the output.
+&nbsp;<a href="./kr019.c">kr019.c</a></p>
+
+<p><strong>Word Count 1.</strong> &nbsp;Count lines, words, and characters in input. The number of 
+lines, words and characters are printed to the output.
+&nbsp;<a href="./kr020.c">kr020.c</a></p>
+
+<p><strong>Word Count 2.</strong> &nbsp;A variant of kr020.c, with a subtle error.
+&nbsp;<a href="./kr020_bh1.c">kr020_bh1.c</a></p>
+
+<p><strong>Word Count 3.</strong> &nbsp;A variant of kr020.c, with a tricky error.
+&nbsp;<a href="./kr020_bh2.c">kr020_bh2.c</a></p>
+
+<p><strong>Count Digits, White Space and Others.</strong> &nbsp;The output will be something like
+<tt>digit = 0 3 0 0 2 1 0 1 0 0, white space = 11, other = 49</tt>
+where three digits "1", two digits "4", one digit "5", one digit "7", 11 white spaces and 
+49 other characters have been entered. 
+&nbsp;<a href="./kr022.c">kr022.c</a></p>
+
+<p><strong>int power(int b, int n) &nbsp;(version 1).</strong> &nbsp;Raise base b to power n. The program 
+kr024 displays a table of n, 2**n and -3**n, for n = 0, 1, ...,9.
+&nbsp;<a href="./kr024.c">kr024.c</a></p>
+
+<p><strong>power(b, n) &nbsp;(old-style version 1).</strong> &nbsp;Same as version1, but use 
+an earlier version of how functions are declared and defined.
+&nbsp;<a href="./kr026.c">kr026.c</a></p>
+
+<p><strong>int power(int b, int n) &nbsp;(version 2).</strong> &nbsp;Same as version1, but slightly optimized
+(using the fact that in C all function arguments are passed "by value").
+&nbsp;<a href="./kr027.c">kr027.c</a></p>
+
+<p><strong>Longest Line 1.</strong> &nbsp;Print longest input line.
+&nbsp;<a href="./kr029.c">kr029.c</a></p>
+
+<p><strong>int getline(s[], n) &nbsp;(version 1): </strong>&nbsp;  getline reads the next n-1 characters 
+into the string s, stopping if a newline is encountered. Note that getline returns the length of the readed 
+string s, or zero on end of file. 
+<br>The test program <tt>kr029_2_t.c</tt> reads a file from the standard input, chunk by chunk, 
+and prints them to the standard output with their length. 
+&nbsp; <a href="./kr029_2_t.c">kr029_2_t.c</a>
+</p>
+
+<p><strong>Longest Line 2.</strong> &nbsp;Same as 'Longest Line 1'; version with external variables.
+&nbsp;<a href="./kr032.c">kr032.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 
+2nd Edition, Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../kr2/index.html">next chapter</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Programs and Program Excerpts</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container"><p>
+<h3 align="center">6. &nbsp; Miscellaneous</h3>
+
+<p><strong>unsigned getbits(unsigned x, int p, int n). </strong>&nbsp; Return the (right adjusted) 
+n-bit field of x that begins at position p. For example, <tt>getbits(x,4,3)</tt> returns the three 
+bits in bit positions 4, 3, 2, right adjusted. It is assumed that bit position 0 is at the right end
+and that n and p are sensible positive values.<br>
+The test program <tt>kr049_t.c</tt> reads the three integers x, p, and n and prints the value 
+returned by <tt>getbits(x, p, n)</tt>.
+&nbsp;&nbsp;<a href="../kr/kr2/kr049.c">kr049.c</a> 
+&nbsp;&nbsp;<a href="../kr/kr2/kr049_t.c">kr049_t.c</a></p> 
+
+<p><strong>int bitcount(unsigned x). </strong>&nbsp; Return the number of 1 bits in its integer 
+argument x.  For example, <tt>bitcount(7)</tt> returns 3.<br>
+The test program <tt>kr050_t.c</tt> reads the unsigned x and prints the value 
+returned by <tt>bitcount(x)</tt>.
+&nbsp;&nbsp;<a href="../kr/kr2/kr050.c">kr050.c</a> 
+&nbsp;&nbsp;<a href="../kr/kr2/kr050_t.c">kr050_t.c</a></p> 
+
+<p><strong>C Preprocessor: &nbsp;Macro Substitution. </strong>&nbsp; 
+<br>The program  <tt>kr089-91_t</tt> is not really a test program, but it should at least help you 
+to undestand the macro substitution in C, which seems to be trivial at first 
+glance, but has in fact to be handled with great care.
+&nbsp;&nbsp;<a href="../kr/kr4/kr089-91_t.c">kr089-91_t.c</a></p>
+
+<p><strong>C Preprocessor: &nbsp;Conditional Inclusion. </strong>&nbsp; 
+<br>The program  <tt>kr091_t</tt> is not really a test program, but it should at least help you 
+to undestand the conditional inclusion in C.
+&nbsp;&nbsp;<a href="../kr/kr4/kr091_t.c">kr091_t.c</a></p>
+
+<p><strong>Command line arguments (versions 1 and 2). </strong>&nbsp; Copy the command line arguments to the output.
+<br>Synopsis: &nbsp;kr115 &nbsp;[args]
+<br><a href="../kr/kr5/kr115.c">kr115.c</a>
+&nbsp;&nbsp;<a href="../kr/kr5/kr115_2.c">kr115_2.c</a></p>
+
+<p><strong>Variable-length Argument List. </strong>&nbsp;  
+<br>The program <a href="../kr/kr7/kr156.c">kr156.c</a> reads a character, integer, float and word and prints them out with <tt>minprintf(s,../kr.)</tt>, a minimal printf with a variable-length argument list.</p>
+
+<p><strong>system(char *s): </strong>&nbsp; Execute the command contained in the string s.
+<br>The test program <a href="../kr/kr7/kr167_t.c">kr167_t.c</a> reads UNIX command from the standard input and executes them. Hint: Try out simple ones as <tt>date</tt>, but also more complex ones as <tt>egrep -l MAX *.c</tt>.</p>
+
+
+<p>
+<a href="index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="5. IO and System Calls.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 
+2nd Edition, Prentice Hall 1988</p>
+
+<p>© B&eacute;at Hirsbrunner, DIUF, University of Fribourg, 2008</p></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+p 1.25    // push 1.25 onto the stack
+p 2.5     // push 2.5 onto the stack
+o         // pop (remove and get 2.5)
+o         // pop (remove and get 1.25)
+o         // pop (error: empty stack!)
+Q         // quit
+
+
+
+--------------------------------------------------------------------------------
+DESCRIPTION
+A batch input file for the push/pop test program. 
+
+Note that this batch file has been provided mostly for documentation reasons: In 
+general it is much better to run this test program interactively!
+
+The above commands will produce the following output:
+
+>the following element has been added: 1.250000
+>the following element has been added: 2.500000
+>the top element has been removed: 2.500000
+>the top element has been removed: 1.250000
+>error: stack empty
+the top element has been removed: 0.000000
+ 
+
+Author: B. Hirsbrunner, University of Fribourg, 24 January 2008

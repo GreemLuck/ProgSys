@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Answers to Exercises</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+<h3 align="center">Chapter 3 - Control Flow</h3>
+
+<p>
+<strong>Exercise 3-1.</strong>&nbsp; Our binary search makes two tests inside the
+loop, when one would suffice (at the price of more tests outside.) Write a
+version with only one test inside the loop and measure the difference in
+run-time.
+&nbsp;<a href="krx301.c">sol.c</a>
+&nbsp;<a href="krx301v2.c">sol2.c</a>
+&nbsp;<a href="krx301v3.c">sol3.c</a></p>
+
+<p>
+<strong>Exercise 3-2.</strong>&nbsp; Write a function <tt>escape(s,t)</tt> that
+converts characters like newline and tab into visible escape sequences like
+<tt>\n</tt> and <tt>\t</tt> as it copies the string <tt>t</tt> to <tt>s</tt>.
+Use a <tt>switch</tt>. Write a function for the other direction as well,
+converting escape sequences into the real characters.
+&nbsp;<a href="krx302.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 3-3.</strong>&nbsp; Write a function <tt>expand(s1,s2)</tt> that expands shorthand notations like <tt>a-z</tt> in the string <tt>s1</tt> into the equivalent complete list <tt>abc...xyz</tt> in <tt>s2</tt>. Allow for letters of either case and digits, and be prepared to handle cases like <tt>a-b-c</tt> and <tt>a-z0-9</tt> and <tt>-a-z</tt>. Arrange that a leading or trailing <tt>-</tt> is taken literally.
+&nbsp;<a href="krx303.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 3-4.</strong>&nbsp; In a two's complement number representation, our version of <tt>itoa</tt> does not handle the largest negative number, that is, the value of <tt>n</tt> equal to -(2<sup>wordsize-1</sup>). Explain why not. Modify it to print that value correctly, regardless of the machine on which it runs.
+&nbsp;<a href="krx304.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 3-5.</strong>&nbsp; Write the function <tt>itob(n,s,b)</tt> that converts the integer <tt>n</tt> into a base <tt>b</tt> character representation in the string <tt>s</tt>. In particular, <tt>itob(n,s,16)</tt> formats <tt>s</tt> as a hexadecimal integer in <tt>s</tt>.
+&nbsp;<a href="krx305.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 3-6.</strong>&nbsp; Write a version of <tt>itoa</tt> that accepts
+three arguments instead of two. The third argument is a minimum field width;
+the converted number must be padded with blanks on the left if necessary to
+make it wide enough.
+&nbsp;<a href="krx306.c">sol.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx2/index.html">previous chapter</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx4/index.html">next chapter</a>
+</p>
+
+</div>
+</body>
+</html>
+

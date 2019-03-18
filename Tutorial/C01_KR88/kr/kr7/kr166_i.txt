@@ -1,0 +1,1 @@
+This is a simple input file that can be used with the test program kr166_t.c

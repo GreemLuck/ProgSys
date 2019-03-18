@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+   <title>The C Programming Language: Answers to Exercises</title>
+   
+   <meta name="description" content="The C programming Language by Brian W. Kernighan and Dennis M. Ritchie">
+   <meta name="keywords" content="programming, C, kernighan, ritchie">
+   
+   <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="Beat Hirsbrunner">
+   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+</head>
+
+
+<body>
+<div class="container">
+
+<h3 align="center">Chapter 1 - A Tutorial Introduction</h3>
+
+<p>
+<strong>Exercise 1-1.</strong>&nbsp; Run the "<tt>hello, world</tt>'' program on
+your system. Experiment with leaving out parts of the program, to see what
+error messages you get.
+&nbsp;<a href="krx101.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-2.</strong>&nbsp; Experiment to find out what happens when
+<tt>prints</tt>'s argument string contains <em>\c</em>, where <em>c</em> is
+some character not listed above.
+&nbsp;<a href="krx102.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-3.</strong>&nbsp; Modify the temperature conversion program to print a heading above the table.
+&nbsp;<a href="krx103.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-4.</strong>&nbsp; Write a program to print the corresponding Celsius to Fahrenheit table.
+&nbsp;<a href="krx104.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-5.</strong>&nbsp; Modify the temperature conversion program to
+print the table in reverse order, that is, from 300 degrees to 0.
+&nbsp;<a href="krx105.c">sol.c</a>
+&nbsp; <a href="krx105v2.c">sol2.c</a>
+&nbsp; <a href="krx105v3.c">sol3.c</a></p>
+
+<p>
+<strong>Exercsise 1-6.</strong>&nbsp; Verify that the expression
+<tt>getchar() != EOF</tt> is 0 or 1.
+&nbsp;<a href="krx106.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-7.</strong>&nbsp; Write a program to print the value of
+<tt>EOF</tt>.
+&nbsp;<a href="krx107.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-8.</strong>&nbsp; Write a program to count blanks, tabs, and newlines.
+&nbsp;<a href="krx108.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-9.</strong>&nbsp; Write a program to copy its input to its output,
+replacing each string of one or more blanks by a single blank. 
+&nbsp;<a href="krx109.c">sol.c</a>
+&nbsp;<a href="krx109v2.c">sol2.c</a> 
+&nbsp;<a href="krx109v3.c">sol3.c</a></p>
+
+<p>
+<strong>Exercise 1-10.</strong>&nbsp; Write a program to copy its input to its output,
+replacing each tab by <tt>\t</tt>, each backspace by <tt>\b</tt>, and each
+backslash by <tt>\\</tt>. This makes tabs and backspaces visible in an
+unambiguous way. 
+&nbsp;<a href="krx110.c">sol.c</a>
+&nbsp;<a href="krx110v2.c">sol2.c</a> </p>
+
+<p>
+<strong>Exercise 1-11.</strong>&nbsp; How would you test the word count program?
+What kinds of input are most likely to uncover bugs if there are any?
+&nbsp;<a href="krx111.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-12.</strong>&nbsp; Write a program that prints its input one
+word per line.
+&nbsp;<a href="krx112.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-13.</strong>&nbsp; Write a program to print a histogram of the
+lengths of words in its input. It is easy to draw the histogram with the bars
+horizontal; a vertical orientation is more challenging.
+&nbsp;<a href="krx113.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-14.</strong>&nbsp; Write a program to print a histogram of the
+frequencies of different characters in its input.
+&nbsp;<a href="krx114.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-15.</strong>&nbsp; Rewrite the temperature conversion program of Section 1.2 to use 
+a function for conversion.
+&nbsp;<a href="krx115.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-16.</strong>&nbsp; Revise the main routine of the longest-line
+program so it will correctly print the length of arbitrary long input lines,
+and as much as possible of the text.
+&nbsp;<a href="krx116.c">sol.c</a>
+&nbsp;<a href="krx116v2.c">sol2.c</a></p>
+
+<p>
+<strong> Exercise 1-17.</strong>&nbsp; Write a program to print all input lines
+that are longer than 80 characters.
+&nbsp;<a href="krx117.c">sol.c</a></p>
+
+<p>
+<strong> Exercise 1-18.</strong>&nbsp; Write a program to remove trailing blanks
+and tabs from each line of input, and to delete entirely blank lines.
+&nbsp;<a href="krx118.c">sol.c</a>
+&nbsp;<a href="krx118v2.c">sol2.c</a></p>
+
+<p>
+<strong> Exercise 1-19.</strong>&nbsp; Write a function <tt>reverse(s)</tt> that
+reverses the character string <tt>s</tt>. Use it to write a program that
+reverses its input a line at a time.
+&nbsp;<a href="krx119.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-20.</strong>&nbsp; Write a program <tt>detab</tt> that replaces
+tabs in the input with the proper number of blanks to space to the next tab
+stop. Assume a fixed set of tab stops, say every <em>n</em> columns. Should
+<em>n</em> be a variable or a symbolic parameter?
+&nbsp;<a href="krx120.c">sol.c</a>
+&nbsp;<a href="krx120v2.c">sol2.c</a></p> 
+
+<p>
+<strong>Exercise 1-21.</strong>&nbsp; Write a program <tt>entab</tt> that replaces
+strings of blanks by the minimum number of tabs and blanks to achieve the
+same spacing. Use the same tab stops as for <tt>detab</tt>. When either a tab
+or a single blank would suffice to reach a tab stop, which should be given
+preference?
+&nbsp;<a href="krx121.c">sol.c</a>
+&nbsp;<a href="krx121v2.c">sol2.c</a></p>
+
+<p>
+<strong>Exercise 1-22.</strong>&nbsp; Write a program to  ''fold'' long input lines
+into two or more shorter lines after the last non-blank character that occurs
+before the <em>n</em>-th column of input. Make sure your program does
+something intelligent with very long lines, and if there are no blanks or
+tabs before the specified column.
+&nbsp;<a href="krx122.c">sol.c</a></p>
+
+<p>
+<strong>Exercise 1-23.</strong>&nbsp; Write a program to remove all comments from a C program. Don't forget to handle quoted strings and character constants properly. C comments don't nest.
+&nbsp;<a href="krx123.c">sol.c</a>
+&nbsp;<a href="krx123v2.c">sol2.c</a>
+&nbsp;<a href="krx123v3.c">sol3.c</a>
+&nbsp;<a href="krx123v4.c">sol4.c</a>
+&nbsp;<a href="krx123v5.c">sol5.c</a>
+&nbsp;<a href="krx123v6.c">sol6.c</a>
+&nbsp;<a href="krx123v7.c">sol7.c</a>
+&nbsp;<a href="krx123v8.c">sol8.c</a></p>
+
+<p>
+<strong>Exercise 1-24.</strong>&nbsp; Write a program to check a C program for
+rudimentary syntax errors like unmatched parentheses, brackets and braces.
+Don't forget about quotes, both single and double, escape sequences, and
+comments. (This program is hard if you do it in full generality.) 
+&nbsp;<a href="krx124.c">sol.c</a>
+&nbsp;<a href="krx124v2.c">sol2.c</a>
+&nbsp;<a href="krx124v3.c">sol3.c</a></p>
+
+<p>Reference: Brian W. Kernighan, Dennis M. Ritchie: The C Programming Language, 2nd Edition, 
+Prentice Hall 1988</p>
+
+<p>
+<a href="../index.html">index</a>&nbsp;&nbsp;&nbsp;
+<a href="../krx2/index.html">next chapter</a></p>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+This is a test text for use with the pattern searching program.
+
+Try to search for a pattern or exclude a pattern with -x.
+Line numbers are displayed if you use the flag -n.
+
+Any line that contains that pattern will be displayed or not depending of the use of -x.
+
+Try out the command "./kr117 -x -n line < kr117_i.txt".
+The lines that do not contain the pattern 'line' will be copied to the output file with the line number.
